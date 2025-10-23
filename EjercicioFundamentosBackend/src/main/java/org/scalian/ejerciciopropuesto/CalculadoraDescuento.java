@@ -1,4 +1,5 @@
 package org.scalian.ejerciciopropuesto;
 
-public class CalculadoraDescuento {
+public interface CalculadoraDescuento {
+    double calcular (Producto producto);
 }
