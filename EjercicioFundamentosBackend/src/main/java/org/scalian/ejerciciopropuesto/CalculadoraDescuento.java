@@ -1,4 +1,7 @@
-package org.scalian.ejerciciopropuesto;
+package main.java.org.scalian.ejerciciopropuesto;
 
-public class CalculadoraDescuento {
+@FunctionalInterface
+public interface CalculadoraDescuento {
+    double nuevoPrecio(Producto producto);
 }
+
