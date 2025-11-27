@@ -1,0 +1,16 @@
+package org.scalian.ejerciciopropuesto;
+
+public record Producto(String nombre, double precio, String categoria) {
+
+    public Producto {
+        if (nombre == null || nombre.isBlank()) {
+            throw new IllegalArgumentException("El nombre no puede estar vacío");
+        }
+        if (precio <= 0) {
+            throw new IllegalArgumentException("El precio debe ser mayor que cero");
+        }
+        if (categoria == null || categoria.isBlank()) {
+            throw new IllegalArgumentException("La categoría no puede estar vacía");
+        }
+    }
+}
